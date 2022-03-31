@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: host-ingress
+ namespace: hosting
+spec:
+ rules:
+ - host: hosting.maheswargoud.xyz
+   http:
+     paths:
+     - path:
+       backend:
+         serviceName: host-svc
+         servicePort: 80

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: host-dept
+  namespace: hosting
+spec:
+  selector:
+    matchLabels:
+      app: host-deployment
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: host-deployment
+    spec:
+      containers:
+      - name: host-deployment
+        image: 861531569385.dkr.ecr.us-east-2.amazonaws.com/hosting:number .
+        ports:
+        - containerPort: 80
+

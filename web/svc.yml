@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: host-svc
+  namespace: hosting
+spec:
+  selector:
+    app: host-deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
