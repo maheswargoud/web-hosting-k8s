@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
       - name: host-deployment
-        image: 861531569385.dkr.ecr.us-east-2.amazonaws.com/hosting:number .
+        image: 861531569385.dkr.ecr.us-east-2.amazonaws.com/hosting:number
         ports:
         - containerPort: 80
-
